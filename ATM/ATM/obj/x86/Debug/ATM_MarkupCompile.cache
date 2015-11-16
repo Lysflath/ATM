@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programs\Visual Studio\.net\ATM\ATM\ATM\App.xaml
-2711561924
+5-1024136593
 
-61169328568
+9401697609
 12-1547151337
-ChooseLanguageWindow.xaml;MainWindow.xaml;
+CurrentBalanceWindow.xaml;BalanceWindow.xaml;ChooseLanguageWindow.xaml;MainMenuWindow.xaml;MainWindow.xaml;
 
 False
 

@@ -21,7 +21,39 @@ namespace ATM
         public ChooseLanguageWindow()
         {
             InitializeComponent();
-            System.Windows.Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenuWindow mmw = new MainMenuWindow();
+            mmw.Show();
+            this.Hide();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenuWindow mmw = new MainMenuWindow();
+            mmw.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenuWindow mmw = new MainMenuWindow();
+            mmw.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenuWindow mmw = new MainMenuWindow();
+            mmw.Show();
+            this.Hide();
         }
 
     }

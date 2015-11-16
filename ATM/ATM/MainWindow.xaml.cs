@@ -19,17 +19,29 @@ namespace ATM
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int balance = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            System.Windows.Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
         }
 
         private void image1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            // формування випадкового числа, яке буде становити кошти користувача
+            Random rand = new Random();
+            balance = rand.Next(20000);
             ChooseLanguageWindow ChoseLang = new ChooseLanguageWindow();
+
+            // перехід до головного меню
             ChoseLang.Show();
             this.Hide();
+        }
+
+        //закриття програми після закриття вікна
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
