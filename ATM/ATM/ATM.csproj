@@ -67,6 +67,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="IssuanceInputSumWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IssuanceOperationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +96,12 @@
     <Compile Include="ChooseLanguageWindow.xaml.cs">
       <DependentUpon>ChooseLanguageWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IssuanceInputSumWindow.xaml.cs">
+      <DependentUpon>IssuanceInputSumWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IssuanceOperationWindow.xaml.cs">
+      <DependentUpon>IssuanceOperationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuWindow.xaml.cs">
       <DependentUpon>MainMenuWindow.xaml</DependentUpon>
     </Compile>
@@ -95,8 +109,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MoneyIssuanceMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostIssuanceOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MoneyIssuanceMainWindow.xaml.cs">
+      <DependentUpon>MoneyIssuanceMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostIssuanceOperation.xaml.cs">
+      <DependentUpon>PostIssuanceOperation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -137,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\DE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Снимок17.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

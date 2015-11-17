@@ -31,6 +31,7 @@ namespace ATM
             // формування випадкового числа, яке буде становити кошти користувача
             Random rand = new Random();
             balance = rand.Next(20000);
+
             ChooseLanguageWindow ChoseLang = new ChooseLanguageWindow();
 
             // перехід до головного меню
