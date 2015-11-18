@@ -18,9 +18,7 @@ namespace ATM
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        public static int balance = 0;
-
+    {       
         public MainWindow()
         {
             InitializeComponent();
@@ -28,14 +26,8 @@ namespace ATM
 
         private void image1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            // формування випадкового числа, яке буде становити кошти користувача
-            Random rand = new Random();
-            balance = rand.Next(20000);
-
-            ChooseLanguageWindow ChoseLang = new ChooseLanguageWindow();
-
-            // перехід до головного меню
-            ChoseLang.Show();
+            AuthorizationWindow aw = new AuthorizationWindow();
+            aw.Show();
             this.Hide();
         }
 
