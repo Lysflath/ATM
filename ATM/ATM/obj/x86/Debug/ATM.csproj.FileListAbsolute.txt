@@ -27,3 +27,7 @@ D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\IssuanceInputSumWindow.
 D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\IssuanceInputSumWindow.g.cs
 D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\AuthorizationWindow.baml
 D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\AuthorizationWindow.g.cs
+D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\Telephone_Window.baml
+D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\Telephone_Window.g.cs
+D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\TelephonePaymentWindow.baml
+D:\Programs\Visual Studio\.net\ATM\ATM\ATM\obj\x86\Debug\TelephonePaymentWindow.g.cs

@@ -25,6 +25,7 @@ namespace ATM
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            MainMenuWindow.language = 1;
             MainMenuWindow mmw = new MainMenuWindow();
             mmw.Show();
             this.Hide();
@@ -37,24 +38,10 @@ namespace ATM
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            MainMenuWindow.language = 2;
             MainMenuWindow mmw = new MainMenuWindow();
             mmw.Show();
-            this.Hide();
+            this.Hide();            
         }
-
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            MainMenuWindow mmw = new MainMenuWindow();
-            mmw.Show();
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            MainMenuWindow mmw = new MainMenuWindow();
-            mmw.Show();
-            this.Hide();
-        }
-
     }
 }

@@ -8,12 +8,8 @@
         <Image Height="66" Margin="102,102,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="/ATM;component/Images/GB.png" HorizontalAlignment="Left" Width="46" OpacityMask="#82000000" />
         <Button Content="UKR" Height="46" Margin="0,199,0,0" Name="button2" VerticalAlignment="Top" Background="#00000000" BorderBrush="#00000000" Foreground="White" FontFamily="Segoe UI" FontSize="28" FontWeight="Normal" FontStretch="Normal" HorizontalContentAlignment ="Left" HorizontalAlignment="Left" Width="150" Click="button2_Click" />
         <Image Height="66" HorizontalAlignment="Left" Margin="101,189,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="48" Source="/ATM;component/Images/UA.png" OpacityMask="#82000000" />
-        <Button Background="#00000000" BorderBrush="#00000000" Content="RUS" FontFamily="Segoe UI" FontSize="28" FontStretch="Normal" FontWeight="Normal" Foreground="White" Height="46" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Margin="0,112,0,0" Name="button3" VerticalAlignment="Top" Width="150" Click="button3_Click" />
-        <Image Height="67" HorizontalAlignment="Right" Margin="0,101,101,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="49" Source="/ATM;component/Images/RU.png" OpacityMask="#82000000" />
-        <Button Background="#00000000" BorderBrush="#00000000" Content="DEU" FontFamily="Segoe UI" FontSize="28" FontStretch="Normal" FontWeight="Normal" Foreground="White" Height="46" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Margin="0,199,0,0" Name="button4" VerticalAlignment="Top" Width="150" Click="button4_Click" />
-        <Image Height="66" Margin="0,189,102,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Source="/ATM;component/Images/DE.png" OpacityMask="#82000000" HorizontalAlignment="Right" Width="48" />
-        <Label Content="Chose language" FontFamily="Verdana" FontSize="25" Foreground="White" Height="56" HorizontalAlignment="Left" Margin="173,12,0,0" Name="label2" VerticalAlignment="Top" Width="213" />
-        <Label Content="Оберіть мову" FontFamily="Verdana" FontSize="20" Foreground="White" Height="56" Margin="209,50,0,0" Name="label3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148" />
+        <Label Content="Chose language" FontFamily="Verdana" FontSize="25" Foreground="White" Height="56" HorizontalContentAlignment="Center" Margin="12,12,12,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Оберіть мову" FontFamily="Verdana" FontSize="20" Foreground="White" Height="56" Margin="12,50,12,0" Name="label3" VerticalAlignment="Top" HorizontalContentAlignment="Center" />
         <Grid.Background>
             <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                 <GradientStop Color="#FF3D96B7" Offset="0" />
