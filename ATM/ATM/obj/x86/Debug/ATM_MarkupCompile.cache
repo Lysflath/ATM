@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programs\Visual Studio\.net\ATM\ATM\ATM\App.xaml
-1293639880
+15-1307193477
 
-161275663901
+19-573062761
 12-1547151337
-AuthorizationWindow.xaml;CurrentBalanceWindow.xaml;BalanceWindow.xaml;ChooseLanguageWindow.xaml;IssuanceInputSumWindow.xaml;IssuanceOperationWindow.xaml;MainMenuWindow.xaml;MainWindow.xaml;MoneyIssuanceMainWindow.xaml;PostIssuanceOperation.xaml;TelephonePaymentWindow.xaml;Telephone_Window.xaml;
+AuthorizationWindow.xaml;CurrentBalanceWindow.xaml;BalanceWindow.xaml;ChooseLanguageWindow.xaml;IssuanceInputSumWindow.xaml;IssuanceOperationWindow.xaml;MainMenuWindow.xaml;MainWindow.xaml;MoneyIssuanceMainWindow.xaml;PostIssuanceOperation.xaml;RemittancesWindow.xaml;RemmitancePaymentWindow.xaml;SettingsWindow.xaml;TelephonePaymentWindow.xaml;Telephone_Window.xaml;
 
 False
 

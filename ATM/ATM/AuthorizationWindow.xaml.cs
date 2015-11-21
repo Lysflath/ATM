@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Reflection;
 
 namespace ATM
 {
@@ -19,10 +20,11 @@ namespace ATM
     /// </summary>
     public partial class AuthorizationWindow : Window
     {
+        public static string cardNumber;
         public static string path;
-        public static string filePath;
+        public static string filePath;        
         public static string pin;
-        public static string[] lines;
+        public static string[] lines;        
         public static int balance = 0;
         public AuthorizationWindow()
         {
@@ -31,7 +33,8 @@ namespace ATM
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            path = System.IO.Path.GetFullPath(@"D:\Programs\Visual Studio\.net\ATM\ATM\ATM\base");
+            //path = System.IO.Path.GetFullPath(Assembly.GetExecutingAssembly().Location);
+            path = ("db");
             DirectoryInfo dir = new DirectoryInfo(path);
             foreach(FileInfo file in dir.GetFiles())
             {
@@ -42,15 +45,12 @@ namespace ATM
                     pin = lines[1];
                     balance = int.Parse(lines[2]);
                     label3.Content = balance;
+                    cardNumber = lines[0];
 
                     ChooseLanguageWindow ChoseLang = new ChooseLanguageWindow();
                     // перехід до головного меню
                     ChoseLang.Show();
                     this.Hide();
-                    break;
-                }
-                else 
-                {
                     break;
                 }
             }

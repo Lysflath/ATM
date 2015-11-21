@@ -77,5 +77,19 @@ namespace ATM
             tw.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            RemittancesWindow rw = new RemittancesWindow();
+            rw.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow sw = new SettingsWindow();
+            sw.Show();
+            this.Hide();
+        }
     }
 }
