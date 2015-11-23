@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangePINWindow.xaml.cs">
+      <DependentUpon>ChangePINWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemittancesWindow.xaml.cs">
       <DependentUpon>RemittancesWindow.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
       <DependentUpon>Telephone_Window.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePINWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
