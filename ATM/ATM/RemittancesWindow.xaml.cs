@@ -27,6 +27,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // перевірка конфігурації мови
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)
@@ -45,15 +46,17 @@ namespace ATM
 
         }
 
+        // операція грошового переказу
         private void button6_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 AuthorizationWindow.path = ("db");
                 DirectoryInfo dir = new DirectoryInfo(AuthorizationWindow.path);
-                foreach (FileInfo file in dir.GetFiles())
+                foreach (FileInfo file in dir.GetFiles()) // перевірка кожного користуваціького файлу
                 {
                     linesGetter = File.ReadAllLines(@file.FullName, Encoding.Default);
+                    // якщо номер картки існує у користувацькому файлі і не є номером картки, автрризованого користувача, операція виконується
                     if (linesGetter[0] == textBox1.Text && linesGetter[0] != AuthorizationWindow.cardNumber)
                     {
                         filePathGetter = file.FullName;
@@ -64,6 +67,7 @@ namespace ATM
                     }
                 }                
             }
+            // виведення повідомлення, якщо дані введені некоректно
             catch
             {
                 if (MainMenuWindow.language == 1)
@@ -72,6 +76,7 @@ namespace ATM
                     MessageBox.Show("Invalid number");
             }
 
+            // виведення повідомлення, якщо дані введені некоректно
             if (AuthorizationWindow.lines[0] == textBox1.Text)
             {
                 if (MainMenuWindow.language == 1)
@@ -81,6 +86,7 @@ namespace ATM
             }
         }
 
+        // перехід у головне вікно
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             MainMenuWindow mmw = new MainMenuWindow();
@@ -88,6 +94,7 @@ namespace ATM
             this.Hide();
         }
 
+        // вихід із приграми при закритті вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);

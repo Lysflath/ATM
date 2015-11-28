@@ -24,6 +24,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // перехід до вікна введення паролю
         private void image1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             AuthorizationWindow aw = new AuthorizationWindow();

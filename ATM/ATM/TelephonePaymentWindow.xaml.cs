@@ -24,6 +24,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // перевіока конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)
@@ -41,6 +42,7 @@ namespace ATM
             }
         }
 
+        // перехід до попереднього меню
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             Telephone_Window tw = new Telephone_Window();
@@ -76,6 +78,7 @@ namespace ATM
             }            
         }
 
+        // вихід із програми при закритті вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);

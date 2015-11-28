@@ -23,6 +23,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // Зміна мови на українську
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             MainMenuWindow.language = 1;
@@ -31,11 +32,13 @@ namespace ATM
             this.Hide();
         }
 
+        // закриття програми після закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Environment.Exit(0); 
         }
 
+        // зміна мови на англійську
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             MainMenuWindow.language = 2;

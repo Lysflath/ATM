@@ -24,6 +24,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // перевірка конфігурації мови, при завантаженрні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)
@@ -41,6 +42,7 @@ namespace ATM
             }
         }
 
+        // перехід у головне вікно грошових переказів
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             RemittancesWindow rw = new RemittancesWindow();
@@ -73,12 +75,14 @@ namespace ATM
                     this.Hide();
                 }
             }
+            // виведення повідомлення про помилку у разі введення некоректних даних
             catch
             {
                 MessageBox.Show("Дані введені не коректно");
             }
         }
 
+        // вихід із програми у разі закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);

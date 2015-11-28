@@ -24,6 +24,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // повернення до головного меню грошових переказів
         private void button6_Click(object sender, RoutedEventArgs e)
         {
             MoneyIssuanceMainWindow mimw = new MoneyIssuanceMainWindow();
@@ -31,6 +32,7 @@ namespace ATM
             this.Hide();
         }
 
+        // відправлення переказу
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             // перевірка того, чи правильні дані вводить користувач 
@@ -55,15 +57,18 @@ namespace ATM
             }
             catch 
             {
+                // при введенні недопустимих значень виводиться повідомлення про помилку
                 MessageBox.Show("Дані введені не коректно");
             }
         }
 
+        // закриття програми після закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Environment.Exit(0); 
         }
 
+        // перевірка конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)

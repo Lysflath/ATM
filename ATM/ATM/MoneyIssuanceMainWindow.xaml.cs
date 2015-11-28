@@ -24,6 +24,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // повернення до головного меню
         private void button6_Click(object sender, RoutedEventArgs e)
         {
             MainMenuWindow mmw = new MainMenuWindow();
@@ -31,20 +32,24 @@ namespace ATM
             this.Hide();
         }
 
+        // закриття програми при закритті вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
+        // зняття 50 грошових одиниць
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             AuthorizationWindow.balance -= 50;
+            // якщо баланс користувача нижче 0, то виводиться повідомлення про помилку
             if (AuthorizationWindow.balance < 0)
             {
                 AuthorizationWindow.balance += 50;
                 MessageBox.Show("Помилка, недостатньо коштів");
             }
 
+            // якщо дані введені корректно, то операція проводиться, і оновлені дані записуються у файл користувача
             else
             {
                 AuthorizationWindow.lines[2] = AuthorizationWindow.balance.ToString();
@@ -56,10 +61,22 @@ namespace ATM
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
-        {            
-            IssuanceOperationWindow iow = new IssuanceOperationWindow();
-            iow.Show();
-            this.Hide();
+        {
+            AuthorizationWindow.balance -= 100;
+            if (AuthorizationWindow.balance < 0)
+            {
+                AuthorizationWindow.balance += 100;
+                MessageBox.Show("Помилка, недостатньо коштів");
+            }
+
+            else
+            {
+                AuthorizationWindow.lines[2] = AuthorizationWindow.balance.ToString();
+                File.WriteAllLines(AuthorizationWindow.filePath, AuthorizationWindow.lines);
+                IssuanceOperationWindow iow = new IssuanceOperationWindow();
+                iow.Show();
+                this.Hide();
+            }
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -101,6 +118,7 @@ namespace ATM
             }
         }
 
+        // перехід до персонального введення суми видачі
         private void button5_Click(object sender, RoutedEventArgs e)
         {
             IssuanceInputSumWindow iisw = new IssuanceInputSumWindow();
@@ -108,6 +126,7 @@ namespace ATM
             this.Hide();
         }
 
+        // перевірка конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)

@@ -20,8 +20,7 @@ namespace ATM
     {
         public BalanceWindow()
         {
-            InitializeComponent();
-            System.Windows.Application.Current.ShutdownMode = ShutdownMode.OnLastWindowClose;            
+            InitializeComponent();           
         }
 
         // повернення до попереднього меню
@@ -35,7 +34,7 @@ namespace ATM
         // закриття програми після закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Environment.Exit(0); 
         }
 
         // виведення поточного балансу
@@ -67,6 +66,7 @@ namespace ATM
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //перевірка конфігурації мови при завантаженні вікна
             if (MainMenuWindow.language == 1)
             {
                 label2.Content = "Оберіть валюту";

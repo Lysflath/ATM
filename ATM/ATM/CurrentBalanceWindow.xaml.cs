@@ -30,13 +30,14 @@ namespace ATM
             bw.Show();
             this.Hide();
         }
-
+        
         // закриття програми після закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Environment.Exit(0); 
         }
 
+        // перевірка конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)

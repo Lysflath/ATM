@@ -38,6 +38,7 @@ namespace ATM
             Environment.Exit(0);
         }
 
+        // перехід до меню зняття коштів
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             MoneyIssuanceMainWindow mimw = new MoneyIssuanceMainWindow();
@@ -45,6 +46,7 @@ namespace ATM
             this.Hide();
         }
 
+        // перевірка конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             ChooseLanguageWindow clw = new ChooseLanguageWindow();
@@ -71,6 +73,7 @@ namespace ATM
 
         }
 
+        // перехід до режиму поповнення рахунку мобільного
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             Telephone_Window tw = new Telephone_Window();
@@ -78,6 +81,7 @@ namespace ATM
             this.Hide();
         }
 
+        // перехід до режиму переказів коштів між користувачами
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             RemittancesWindow rw = new RemittancesWindow();
@@ -85,6 +89,7 @@ namespace ATM
             this.Hide();
         }
 
+        // перехід до меню налаштувань
         private void button5_Click(object sender, RoutedEventArgs e)
         {
             SettingsWindow sw = new SettingsWindow();

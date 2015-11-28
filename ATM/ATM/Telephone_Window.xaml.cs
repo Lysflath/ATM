@@ -23,6 +23,7 @@ namespace ATM
             InitializeComponent();
         }
 
+        // перевірка конфігурації мови при завантаженні вікна
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (MainMenuWindow.language == 1)
@@ -37,12 +38,13 @@ namespace ATM
                 label2.Content = "Input telephone number";
                 button3.Content = "Back";
                 button6.Content = "Accept";
-            }
-            
+            }           
         }
 
+        // перехід до меню поповнення рахунку
         private void button6_Click(object sender, RoutedEventArgs e)
         {
+            // перевірка на корректність введеного нмоеру
             try
             {
                 int number = int.Parse(textBox1.Text);
@@ -62,6 +64,7 @@ namespace ATM
                     this.Hide();
                 }
             }
+            // виведення повідомлення, якщо дані введені невірно
             catch 
             {
                 if (MainMenuWindow.language == 1)   
@@ -71,6 +74,7 @@ namespace ATM
             }                      
         }
 
+        // вихід у головне меню
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             MainMenuWindow mmw = new MainMenuWindow();
@@ -78,6 +82,7 @@ namespace ATM
             this.Hide();
         }
 
+        // вихід із програми при закритті вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);

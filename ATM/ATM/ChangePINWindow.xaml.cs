@@ -27,6 +27,7 @@ namespace ATM
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //перевірка конфігурації мови при завантаженні вікна
             if (MainMenuWindow.language == 1)
             {
                 label2.Content = "Введіть новий PIN";
@@ -44,8 +45,9 @@ namespace ATM
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            Telephone_Window tw = new Telephone_Window();
-            tw.Show();
+            //прийняття нового PIN-коду і перехід до головного меню
+            MainMenuWindow mmw = new MainMenuWindow();
+            mmw.Show();
             this.Hide();
         }
 
@@ -74,10 +76,12 @@ namespace ATM
             }
             catch
             {
+                //вивід повідомлення при некоректному введенні паролю
                 MessageBox.Show("Дані введені не коректно");
             }
         }
 
+        // закриття програми після закриття вікна
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);
